@@ -17,7 +17,7 @@ namespace Program
 
             Console.WriteLine(dictionary[1]); //반환
             dictionary[1] = "일산"; //변경
-            dictionary[3] = "삼";
+            dictionary[3] = "삼"; //생성
             dictionary.Clear();
             Console.WriteLine(dictionary.Count);
             //Console.WriteLine(dictionary[99]); //예외처리
@@ -56,7 +56,7 @@ namespace Dictionary
                 //만약 그 인덱스가 없다면 -1를 반환한다
                 if (index == -1)
                 {
-                    throw new KeyNotFoundException();
+                    throw new ApplicationException("Error");
                 }
                 //인덱스가 있다면 그 인덱스의 값을 반환한다
                 return values[index];
